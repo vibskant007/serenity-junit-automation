@@ -19,8 +19,7 @@ public class UserRegisterTest {
 
     @Test
     public void verifyUserRegistration() {
-
-      Response response = userApiSteps.registerNewUser("eve.holt@reqres.in","pistol");
+        Response response = userApiSteps.registerNewUser("eve.holt@reqres.in","pistol");
         userStepsResponseAssertions.validateStatusCode(response,200);
         userStepsResponseAssertions.validateJsonKeyValueExists(response);
         userStepsResponseAssertions.matchesJsonSchema(response,"userSchema.json");
