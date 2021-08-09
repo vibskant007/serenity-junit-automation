@@ -10,6 +10,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class UserStepsResponseAssertions {
 
+
     @Step
     public void validateStatusCode(Response userResponse,int statusCode) {
         userResponse.then().statusCode(statusCode);
